@@ -9,20 +9,19 @@ const products=[
 {id:6,name:"32GB RAM",price:110,cat:"ram",img:"https://images.unsplash.com/photo-1540829917886-91ab031b1764"},
 
 {id:7,name:"SSD 1TB",price:80,cat:"ssd",img:"https://images.unsplash.com/photo-1591488320449-011701bb6704"},
-{id:8,name:"SSD 2TB",price:150,cat:"ssd",img:"https://images.unsplash.com/photo-1612817288484-6f916006741a"},
+{id:8,name:"SSD 2TB",price:150,cat:"ssd",img:"https://images.unsplash.com/photo-1591488320449-011701bb6704"},
 
 {id:9,name:"PSU 650W",price:90,cat:"psu",img:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7"},
-{id:10,name:"PSU 850W",price:130,cat:"psu",img:"https://images.unsplash.com/photo-1618761714954-0b8cd0026356"},
+{id:10,name:"PSU 850W",price:130,cat:"psu",img:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7"},
 
 {id:11,name:"Motherboard B550",price:140,cat:"mb",img:"https://images.unsplash.com/photo-1518770660439-4636190af475"},
 {id:12,name:"Motherboard Z690",price:210,cat:"mb",img:"https://images.unsplash.com/photo-1587202372634-32705e3bf49c"},
 
-{id:13,name:"Keyboard RGB",price:50,cat:"per",img:"https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04"},
+{id:13,name:"Keyboard RGB",price:50,cat:"per",img:"https://images.unsplash.com/photo-1618384887929-16ec33fab9ef"},
 {id:14,name:"Gaming Mouse",price:40,cat:"per",img:"https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7"},
 
-{id:15,name:"Gaming Monitor",price:260,cat:"per",img:"https://images.unsplash.com/photo-1587825140400-0f3c5f0f1c7e"},
-{id:16,name:"Headset",price:70,cat:"per",img:"https://images.unsplash.com/photo-1580894908361-967195033215"}
-];
+{id:15,name:"Gaming Monitor",price:260,cat:"per",img:"https://images.unsplash.com/photo-1547082299-de196ea013d6"},
+{id:16,name:"Headset",price:70,cat:"per",img:"https://images.unsplash.com/photo-1518444065439-e933c06ce9cd"}];
 
 const container=document.getElementById("products");
 const catsEl=document.getElementById("cats");

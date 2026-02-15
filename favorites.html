@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Обране</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Обране</h1>
+<button onclick="location.href='index.html'">← Назад</button>
+</header>
+
+<main id="fav"></main>
+
+<script src="script.js"></script>
+<script>
+const el=document.getElementById("fav");
+let fav=JSON.parse(localStorage.fav||"[]");
+
+fav.forEach(id=>{
+ const p=products.find(x=>x.id===id);
+ el.innerHTML+=`
+ <div class="card">
+  <img src="${p.img}">
+  <div class="info">
+   <h3>${p.name}</h3>
+   <p>$${p.price}</p>
+  </div>
+ </div>`;
+});
+</script>
+
+</body>
+</html>

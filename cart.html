@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Кошик</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Кошик</h1>
+<button onclick="location.href='index.html'">← Назад</button>
+</header>
+
+<main id="cart"></main>
+<h2 id="total" style="text-align:center"></h2>
+
+<script src="script.js"></script>
+<script>
+const el=document.getElementById("cart");
+const totalEl=document.getElementById("total");
+
+let cart=JSON.parse(localStorage.cart||"[]");
+
+function draw(){
+ el.innerHTML="";
+ let sum=0;
+
+ cart.forEach((id,i)=>{
+  const p=products.find(x=>x.id===id);
+  sum+=p.price;
+
+  el.innerHTML+=`
+  <div class="card" id="item${i}">
+   <img src="${p.img}">
+   <div class="info">
+    <h3>${p.name}</h3>
+    <p>$${p.price}</p>
+    <button class="fav" onclick="del(${i})">Видалити</button>
+   </div>
+  </div>`;
+ });
+
+ totalEl.textContent="Сума: $"+sum;
+}
+draw();
+
+function del(i){
+ const card=document.getElementById("item"+i);
+ card.classList.add("removeAnim");
+
+ setTimeout(()=>{
+  cart.splice(i,1);
+  localStorage.cart=JSON.stringify(cart);
+  draw();
+ },300);
+}
+</script>
+
+</body>
+</html>

@@ -2,27 +2,36 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<title>PC Store</title>
+<title>Tech Store</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
- <h1>🖥 PC Store</h1>
+ <h1>💻 Tech Store</h1>
+
+ <input id="search" placeholder="Пошук товару...">
 
  <div class="nav">
-  <button onclick="location.href='cart.html'">🛒</button>
-  <button onclick="location.href='favorites.html'">❤️</button>
-  <button id="themeToggle">🌙</button>
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('cpu')">CPU</button>
+  <button onclick="filter('gpu')">GPU</button>
+  <button onclick="filter('ram')">RAM</button>
+  <button onclick="filter('ssd')">SSD</button>
+  <button onclick="filter('psu')">PSU</button>
+  <button onclick="filter('cool')">Cooling</button>
+  <button onclick="filter('per')">Periphery</button>
+ </div>
+
+ <div class="links">
+  <a href="cart.html">🛒</a>
+  <a href="favorites.html">❤️</a>
+  <button onclick="toggleDark()">🌙</button>
  </div>
 </header>
 
-<input id="search" placeholder="Пошук товару...">
-
-<div class="categories" id="cats"></div>
-
 <main id="products"></main>
 
-<script src="script.js"></script>
 </body>
 </html>

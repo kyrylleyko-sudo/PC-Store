@@ -1,88 +1,81 @@
 body{
- font-family:Arial;
  margin:0;
- background:#f4f6fb;
- transition:.3s;
-}
-
-.dark{
- background:#1e1f26;
- color:white;
+ font-family:Segoe UI;
+ background:#f5f7fb;
 }
 
 header{
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:15px 30px;
- background:#4a6cf7;
+ background:#111827;
  color:white;
+ padding:20px;
+ display:flex;
+ flex-wrap:wrap;
+ align-items:center;
+ gap:15px;
+}
+
+header input{
+ padding:10px;
+ border-radius:8px;
+ border:none;
 }
 
 .nav button{
- margin-left:10px;
  padding:8px 12px;
  border:none;
- border-radius:8px;
+ border-radius:6px;
  cursor:pointer;
-}
-
-#search{
- margin:20px auto;
- display:block;
- width:90%;
- padding:12px;
- border-radius:10px;
- border:1px solid #ccc;
-}
-
-.categories{
- display:flex;
- justify-content:center;
- flex-wrap:wrap;
- gap:10px;
- margin-bottom:20px;
-}
-
-.categories button{
- padding:6px 12px;
- border:none;
- border-radius:20px;
- background:#e1e5ff;
- cursor:pointer;
- font-size:14px;
-}
-
-.categories button:hover{
- background:#4a6cf7;
+ background:#2563eb;
  color:white;
+ transition:.2s;
+}
+
+.nav button:hover{
+ background:#1d4ed8;
+}
+
+.links{
+ margin-left:auto;
+ display:flex;
+ gap:15px;
+ align-items:center;
+}
+
+.links a,
+.links button{
+ font-size:20px;
+ background:none;
+ border:none;
+ color:white;
+ cursor:pointer;
 }
 
 main{
+ padding:30px;
  display:grid;
- grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
- gap:20px;
- padding:20px;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:25px;
 }
 
 .card{
  background:white;
- border-radius:18px;
- box-shadow:0 6px 20px rgba(0,0,0,.1);
+ border-radius:12px;
  overflow:hidden;
- transform:scale(.95);
- opacity:0;
- animation:show .5s forwards;
-}
-
-@keyframes show{
- to{transform:scale(1);opacity:1}
+ box-shadow:0 5px 15px rgba(0,0,0,.1);
+ animation:fade .4s ease;
 }
 
 .card img{
  width:100%;
- height:170px;
- object-fit:cover;
+ height:180px;
+ object-fit:contain;
+ background:white;
+ padding:10px;
+ transition:.3s;
+}
+
+.card:hover img{
+ transform:scale(1.05);
 }
 
 .info{
@@ -90,25 +83,29 @@ main{
  text-align:center;
 }
 
-.info h3{
- margin:10px 0;
-}
-
 .info button{
  margin:5px;
- padding:8px 14px;
+ padding:8px 12px;
  border:none;
- border-radius:10px;
+ border-radius:6px;
  cursor:pointer;
+ background:#2563eb;
+ color:white;
 }
 
-.add{background:#4a6cf7;color:white;}
-.fav{background:#ff4d6d;color:white;}
-
-.removeAnim{
- animation:remove .4s forwards;
+.fade{
+ transition:.3s;
 }
 
-@keyframes remove{
- to{opacity:0;transform:translateX(100px)}
+.dark{
+ background:#0f172a;
+ color:white;
+}
+
+.dark .card{
+ background:#1e293b;
+}
+@keyframes fade{
+ from{opacity:0;transform:translateY(10px)}
+ to{opacity:1;transform:translateY(0)}
 }
